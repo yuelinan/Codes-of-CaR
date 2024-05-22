@@ -54,7 +54,7 @@ def main(args,logger):
     
     
     opt_separator = optim.Adam(model.separator.parameters(), lr=args.lr, weight_decay=args.l2reg)
-    opt_predictor = optim.Adam(list(model.graph_encoder.parameters())+list(model.predictor.parameters()), lr=args.lr, weight_decay=args.l2reg)
+    opt_predictor = optim.Adam(list(model.graph_encoder.parameters())+list(model.predictor.parameters())+list(model.node_enoder.parameters()), lr=args.lr, weight_decay=args.l2reg)
 
 
     optimizers = {'separator': opt_separator, 'predictor': opt_predictor}
