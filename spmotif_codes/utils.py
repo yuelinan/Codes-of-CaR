@@ -126,7 +126,7 @@ def train_car(args, model, device, loader, optimizers, task_type, optimizer_name
             loss += args.algin_loss * pred['loss_contrastive']
             loss_logger.append(loss.cpu().detach().numpy().tolist())
             if optimizer_name == 'separator': 
-                loss += pred['loss_reg']
+                loss += 10*pred['loss_reg']
 
             loss.backward()
             if args.use_clip_norm:
