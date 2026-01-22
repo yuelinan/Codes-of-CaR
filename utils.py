@@ -25,7 +25,7 @@ def get_args():
                         help='size ratio to regularize the rationale subgraph (default: 0.4)')
 
     # training
-    parser.add_argument('--batch_size', type=int, default=256,
+    parser.add_argument('--batch_size', type=int, default=64,
                         help='input batch size for training (default: 256)')
     parser.add_argument('--epochs', type=int, default=200,
                         help='number of epochs to train (default: 200)')
